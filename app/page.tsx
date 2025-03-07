@@ -1,101 +1,95 @@
-import Image from "next/image";
+import Image from "next/image"
+import { Merienda } from "next/font/google";
+import SliderComentarios from "@/components/Comentarios/SliderComentarios";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+const merienda = Merienda({ subsets: ["latin"], weight: ["400"] });
+ 
+const HomePage = () =>{
+  return(
+    <>
+       <>
+        <main className={`py-44 px-5 md:px-20 `}>
+          <section className="md:flex justify-center items-center text-white">
+            <div className="w-1/2">
+                <h1 className="text-4xl md:text-6xl text-white text-center mb-10">Obtén un <span className="text-blue-950 font-bold">retrato personalizado</span> de tu mascota.</h1>
+                <div className="w-2/5 md:hidden">
+                  <Image width={1000} height={1000} src="/foto_principal.PNG" alt="Foto de mascotas" />
+                </div>
+                <h2 className="text-center text-md md:text-2xl">Porque sabemos que tu mascota es parte de tu familia y sabemos lo importante que es para tí. Obtén un dibujo único y personalizado de tu peludo a un accesible precio.</h2>
+                <div className="flex justify-center mt-14">
+                    <button className="text-2xl bg-blue-800 border-2 shadow-xl shadow-blue-800 cursor-pointer border-blue-300 px-7 py-2 rounded-full text-white   hover:transition-all hover:bg-blue-950">Más información</button>
+                </div>
+            </div>
+            <div className="w-2/5 hidden md:block">
+                <Image width={500} height={600} src="/foto_principal.PNG" alt="Foto de mascotas" />
+            </div>
+          </section>
+
+
+
+
+
+          <section className="mt-14">
+            <h2 className={`text-5xl text-white mb-10 ${merienda.className}`}>Sobre UPet</h2>
+            <p className="text-white text-2xl">En UPet, convertimos el amor por las mascotas en arte. Nos especializamos en la creación de retratos personalizados que capturan la esencia y personalidad de tu compañero peludo. Desde retratos clásicos hasta diseños con accesorios únicos, adaptamos cada obra a tus preferencias para que tengas un recuerdo especial y único.</p>
+            <p className="text-white text-2xl">Además, si buscas un retrato fuera del mundo animal, también podemos hacerlo realidad. Solo cuéntanos tu idea y la convertiremos en una pieza de arte a tu medida.</p>
+            <p className="text-white text-2xl">¡Haz de tu mascota o de cualquier inspiración un retrato inolvidable con UPet!</p>
+          
+          </section>
+
+
+
+
+
+
+          <section className="mt-14">
+            <h2 className={`text-5xl text-white mb-10 ${merienda.className}`}>Servicios</h2>
+            <p className="text-white text-2xl">En UPet, nos dedicamos a crear retratos personalizados con un toque especial. Cada obra es única y se adapta a tus preferencias para que refleje fielmente la esencia de tu mascota o cualquier otra inspiración que desees plasmar en arte.
+
+              Explora nuestras opciones y descubre cómo podemos hacer realidad tu idea:
+
+              📌 Retratos personalizados de mascotas – Capturamos la esencia de tu compañero con ilustraciones detalladas y únicas.
+              🎨 Diferentes estilos y técnicas – Desde retratos realistas hasta versiones artísticas con toques creativos.
+              👑 Accesorios y temáticas especiales – Puedes elegir entre coronas, bufandas, gafas y otros elementos para darle personalidad a la obra.
+              📏 Diversos formatos y tamaños – Adaptamos el retrato al tamaño que necesites, ideal para enmarcar o regalar.
+              🖼️ Retratos de otros temas – No solo trabajamos con mascotas; si tienes otra idea, la hacemos realidad según tus especificaciones.
+
+              Déjanos convertir tu idea en una obra de arte. ¡Tu retrato ideal te espera en UPet!</p>
+          </section>
+
+
+
+
+
+
+
+
+          <section className="mt-14">
+            <h2 className={`text-5xl text-white mb-10 ${merienda.className}`}>Trabajos realizados</h2>
+            <p className="text-white text-2xl">Cada retrato que creamos en UPet es único y está hecho con dedicación para capturar la esencia de cada mascota y personaje. En esta sección, podrás ver algunas de nuestras obras terminadas, cada una diseñada según los gustos y solicitudes de nuestros clientes.</p>
+            <p className="text-white text-2xl">Desde ilustraciones detalladas hasta retratos con accesorios y temáticas especiales, aquí encontrarás una muestra de lo que podemos hacer. ¡Inspírate y visualiza cómo podría lucir tu propio retrato personalizado!</p>
+          
+          </section>
+                   
+
+          <section className="mt-14">
+            <h2 className={`text-5xl mb-14 text-white ${merienda.className}`}>Nuestros clientes</h2>
+
+            <SliderComentarios/>
+          </section>
+                   
+
+
+
+
+          <section className="mt-96">
+            <h2 className={`text-5xl text-white ${merienda.className}`}>Cotiza tu diseño</h2>
+          </section>
+        </main>
+        </>
+    </>
+  )
 }
+
+export default HomePage
