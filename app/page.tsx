@@ -1,22 +1,23 @@
 import Image from "next/image"
-import { Merienda } from "next/font/google";
-import SliderComentarios from "@/components/Comentarios/SliderComentarios";
+// import { Merienda } from "next/font/google";
+
+//  import SliderComentarios from "@/components/Comentarios/SliderComentarios";
 
 
-const merienda = Merienda({ subsets: ["latin"], weight: ["400"] });
- 
+// const merienda = Merienda({ subsets: ["latin"], weight: ["400"] });
+
 const HomePage = () =>{
   return(
     <>
        <>
-        <main className={`py-44 px-5 md:px-20 `}>
+        <main className={`py-28 md:py-44 px-5 md:px-20 `}>
           <section className="md:flex justify-center items-center text-white">
-            <div className="w-1/2">
-                <h1 className="text-4xl md:text-6xl text-white text-center mb-10">Obtén un <span className="text-blue-950 font-bold">retrato personalizado</span> de tu mascota.</h1>
-                <div className="w-2/5 md:hidden">
-                  <Image width={1000} height={1000} src="/foto_principal.PNG" alt="Foto de mascotas" />
+            <div className="w-full md:w-1/2">
+                <h1 className="text-5xl md:text-6xl text-white text-center mb-10">Obtén un <span className="text-blue-950 font-bold">retrato personalizado</span> de tu mascota.</h1>
+                <div className="w-full md:w-2/5 md:hidden">
+                  <Image width={900} height={1000} src="/foto_principal.PNG" alt="Foto de mascotas" />
                 </div>
-                <h2 className="text-center text-md md:text-2xl">Porque sabemos que tu mascota es parte de tu familia y sabemos lo importante que es para tí. Obtén un dibujo único y personalizado de tu peludo a un accesible precio.</h2>
+                <h2 className="text-center text-2xl mt-8 md:mt-0 md:text-2xl">Porque sabemos que tu mascota es parte de tu familia y sabemos lo importante que es para tí. Obtén un dibujo único y personalizado de tu peludo a un accesible precio.</h2>
                 <div className="flex justify-center mt-14">
                     <button className="text-2xl bg-blue-800 border-2 shadow-xl shadow-blue-800 cursor-pointer border-blue-300 px-7 py-2 rounded-full text-white   hover:transition-all hover:bg-blue-950">Más información</button>
                 </div>
@@ -29,7 +30,7 @@ const HomePage = () =>{
 
 
 
-
+{/* 
           <section className="mt-14">
             <h2 className={`text-5xl text-white mb-10 ${merienda.className}`}>Sobre UPet</h2>
             <p className="text-white text-2xl">En UPet, convertimos el amor por las mascotas en arte. Nos especializamos en la creación de retratos personalizados que capturan la esencia y personalidad de tu compañero peludo. Desde retratos clásicos hasta diseños con accesorios únicos, adaptamos cada obra a tus preferencias para que tengas un recuerdo especial y único.</p>
@@ -85,7 +86,7 @@ const HomePage = () =>{
 
           <section className="mt-96">
             <h2 className={`text-5xl text-white ${merienda.className}`}>Cotiza tu diseño</h2>
-          </section>
+          </section> */}
         </main>
         </>
     </>

@@ -7,7 +7,7 @@ const merienda = Merienda({ subsets: ["latin"], weight: ["400"] });
 const Navbar = () =>{
     return(
         <>
-            <header className="bg-sky-800 w-screen py-7 fixed shadow-2xl z-50">
+            <header className="bg-sky-800 w-screen py-7 fixed shadow-2xl z-50 hidden lg:block">
                 <nav >
                     <ul className={`text-white text-2xl flex   gap-x-9 ml-36 ${merienda.className}`}>
                         <li>Inicio</li>
